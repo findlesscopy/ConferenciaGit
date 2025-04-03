@@ -80,8 +80,16 @@ function App() {
               <option value="femenino">Femenino</option>
             </select>
 
+            <label htmlFor="direccion">Dirección:</label>
+            <input
+              type="direccion"
+              className="bg-white w-full px-4 py-2 rounded-md"
+              name="direccion"
+              placeholder="example@mail.com"
+              {...registerUser("direccion", { required: true })}
+            />
 
-            <label htmlFor="email">Dirección de correo electrónico:</label>
+             <label htmlFor="email">Dirección de correo electrónico:</label>
             <input
               type="email"
               className="bg-white w-full px-4 py-2 rounded-md"
