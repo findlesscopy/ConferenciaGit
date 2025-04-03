@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 
 
 function App() {
-  
+
   const {
     register: registerUser,
     handleSubmit: handleSubmitUser,
@@ -12,7 +12,7 @@ function App() {
   } = useForm();
 
   const onRegisterSubmit = async (data) => {
-   
+
     const dataUser = {
       ...data
     }
@@ -42,6 +42,9 @@ function App() {
           <div className="flex items-center justify-center mb-4">
             <div>
               <h1 className="text-2xl font-bold">Registro</h1>
+            </div>
+            <div className="ml-2">
+              <p>Ingrese los datos correspondientes</p>
             </div>
           </div>
           <form className="flex flex-col" onSubmit={handleSubmitUser(onRegisterSubmit)}>
@@ -89,7 +92,7 @@ function App() {
               {...registerUser("direccion", { required: true })}
             />
 
-             <label htmlFor="email">Dirección de correo electrónico:</label>
+            <label htmlFor="email">Dirección de correo electrónico:</label>
             <input
               type="email"
               className="bg-white w-full px-4 py-2 rounded-md"
@@ -111,6 +114,8 @@ function App() {
               >
                 Regístrate
               </button>
+              <button className="bg-sky-700 hover:bg-sky-500 px-4 py-1 rounded-md my-1 w-full font-semibold "> Regresar
+              </button>
             </div>
           </form>
 
@@ -120,6 +125,8 @@ function App() {
               style={{ color: '#393f81' }} className="link"
             > Ingresa aquí
             </a>
+
+
           </p>
 
         </div>
